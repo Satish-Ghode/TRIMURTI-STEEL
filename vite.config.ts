@@ -5,6 +5,9 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // Use relative base so built assets work on GitHub Pages without repo name.
+    // Change to `'/REPO_NAME/'` for a project page if desired.
+    base: './',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
